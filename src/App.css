@@ -2,6 +2,26 @@
   text-align: center;
 }
 
+.Category-Container {
+  display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 20px; 
+    border: 1px solid black; 
+}
+
+.CatBox {
+  margin: 10px; 
+  border: 1px solid red;
+}
+
+.job {
+
+}
+
+.job-child {
+  display: inline-block;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
