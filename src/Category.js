@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import Job from "./Job";
+import JobList from "./JobList";
 
 function Category () {
     const [categories, setCategories] = useState([])
@@ -9,12 +9,11 @@ function Category () {
         .then((r) => r.json())
         .then(data => setCategories(data))
     }, [])
-    console.log(categories)
 
-    const categoryList = categories.map((cat) => {
-        return <div className="CatBox" key={cat.title}>
-            <p>{cat.title}</p>
-            <Job categ={cat.title}/>
+    const categoryList = categories.map((categ) => {
+        return <div className="CatBox" key={categ.title}>
+            <p>{categ.title}</p>
+            <JobList categ={categ}/>
         </div>
     })
 
