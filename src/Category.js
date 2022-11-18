@@ -9,6 +9,7 @@ function Category () {
         .then((r) => r.json())
         .then(data => setCategories(data))
     }, [])
+    console.log(categories)
 
     const categoryList = categories.map((categ) => {
         return <div className="CatBox" key={categ.title}>
@@ -16,6 +17,8 @@ function Category () {
             <JobList categ={categ}/>
         </div>
     })
+
+    
 
     return (
         <div className="Category-Container">
