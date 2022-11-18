@@ -1,6 +1,7 @@
 import NavBar from './NavBar';
 import Home from './Home';
 import JobForm from './JobForm';
+import Category from './Category';
 import { Route, Routes} from 'react-router-dom';
 import React ,{useEffect, useState} from 'react';
 import './App.css';
@@ -23,11 +24,6 @@ function App() {
 
   console.log(jobs)
   console.log(categories)
-  return (
-    <div className="App">
-      
-    </div>
-  );
   
   return (
     <div className="App">
