@@ -23,6 +23,11 @@ function App() {
 
   console.log(jobs)
   console.log(categories)
+  return (
+    <div className="App">
+      
+    </div>
+  );
   
   return (
     <div className="App">
