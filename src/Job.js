@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Job () {
+function Job ({categ}) {
     //fetch
     //build job element
     return (

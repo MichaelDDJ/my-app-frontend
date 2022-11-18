@@ -16,14 +16,14 @@ function App() {
     .then(data => setJobs(data))
   }, [])
 
-  useEffect(() => {
-    fetch("http://localhost:3001/Categories")
-    .then((r) => r.json())
-    .then(data => setCategories(data))
-  }, [])
+  
 
   console.log(jobs)
-  console.log(categories)
+  return (
+    <div className="App">
+      <Category />
+    </div>
+  );
   
   return (
     <div className="App">
