@@ -3,7 +3,7 @@ import React, {useState} from "react";
 function JobForm({categories}) {
     const [job_title, setJob_Title] = useState("")
     const [description, setDescription] = useState("")
-    const [category_id, setCat_id] = useState(``)
+    const [category_id, setCategory_id] = useState("")
     const [category, setCategory] = useState("")
 
     const optionsList = categories.map((category) => {
@@ -48,7 +48,7 @@ function JobForm({categories}) {
             <h2>New Job Form</h2>
                 <input id="input" type="text" placeholder="Enter job title..." onChange={(e) => setJob_Title(e.target.value)} value={job_title} ></input>
                 <input id="input" type="text" placeholder="Enter job description..." onChange={(e) => setDescription(e.target.value)} value={description} ></input>
-                <select id="category-select" value={category_id} onChange={(e) => setCat_id(e.target.value)}>
+                <select id="category-select" value={category_id} onChange={(e) => setCategory_id(e.target.value)}>
                     {optionsList}
                 </select>
                 <button id="btn" >Submit new job</button>
@@ -57,6 +57,9 @@ function JobForm({categories}) {
                 <h5>Add new category?</h5>
                 <input id="input" type="text" placeholder="Enter category name..." onChange={(e) => setCategory(e.target.value)} value={category} ></input>
                 <button></button>
+            </form>
+            <form>
+
             </form>
         </div>
         
