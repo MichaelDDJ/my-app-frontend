@@ -29,7 +29,6 @@ function JobForm({categories}) {
     }
 
     function handleSubmitCat (event) {
-        event.preventDefault();
         console.log(event)
     
         fetch("http://localhost:3001/Categories", {
