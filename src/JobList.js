@@ -12,7 +12,7 @@ function JobList ({categ}) {
     const jobList = jobs.map((job) => {
         return <Job key={job.id} id={job.id} title={job.job_title} desc={job.description} />
     })
-
+    
     return (
         <div>
             {jobList}

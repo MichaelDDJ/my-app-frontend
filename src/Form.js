@@ -42,6 +42,7 @@ function JobForm({categories}) {
     
     }
 
+
     return (
         <div className="job-form">
             <form onSubmit={handleSubmitJob}>
@@ -57,9 +58,6 @@ function JobForm({categories}) {
                 <h5>Add new category?</h5>
                 <input id="input" type="text" placeholder="Enter category name..." onChange={(e) => setCategory(e.target.value)} value={category} ></input>
                 <button></button>
-            </form>
-            <form>
-
             </form>
         </div>
         
