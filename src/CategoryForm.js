@@ -1,8 +1,6 @@
 import React, {useState} from "react";
 
 function CategoryForm ({categories, setCategories}) {
-    const [title, setTitle] = useState("")
-    const [cat_id, setCat_id] = useState("")
     const [category, setCategory] = useState("")
     const [job_title, setJob_Title] = useState("")
     const [description, setDescription] = useState("")
@@ -12,29 +10,12 @@ function CategoryForm ({categories, setCategories}) {
         return <option key={category.title} value={category.id}>{category.title}</option>
     })
 
-    function handleSubmit (e) {
-        e.preventDefault();
-        fetch(`http://localhost:3001/Categories/${cat_id}`, {
-          method: "PATCH",
-          headers: {"Content-Type": "application/json"},
-          body: JSON.stringify({
-            title: title,
-          })
-        })
-        .then((r) => r.json())
-        .then((data) => setCategories(categories.map((category) => {
-            if (category.id === data.id) {
-                return data;
-            } else {
-                return category;
-            }
-        })))
-      }
+    
 
       function handleSubmitCat (event) {
         event.preventDefault();
     
-        fetch("http://localhost:3001/Categories", {
+        fetch("http://localhost:3001/categories", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({title: category})
@@ -47,7 +28,7 @@ function CategoryForm ({categories, setCategories}) {
     function handleSubmitJob (event) {
         event.preventDefault();
 
-        fetch("http://localhost:3001/Jobs", {
+        fetch("http://localhost:3001/jobs", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -71,15 +52,9 @@ function CategoryForm ({categories, setCategories}) {
 
     return (
     <div>
-        <form onSubmit={handleSubmit} className="Cat-Form">
-            <input id="input" type="text" placeholder="Enter new Category name..." onChange={(e) => setTitle(e.target.value)} value={title} ></input>
-            <select id="category-select" value={cat_id} onChange={(e) => setCat_id(e.target.value)}>
-            {optionsList}
-            </select>
-            <button id="btn" >Change Category Name</button>
-        </form>
+        
         <form onSubmit={handleSubmitCat}>
-            <h5>Add new category?</h5>
+            <h2>Add new category?</h2>
             <input id="input" type="text" placeholder="Enter category name..." onChange={(e) => setCategory(e.target.value)} value={category} ></input>
             <button>Submit new category</button>
         </form>

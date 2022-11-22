@@ -3,20 +3,14 @@
   background-color: rgb(55, 106, 153);
 }
 
-.NavBar {
-  color: white;
-}
-
 .Cat-Form {
-  position: -webkit-sticky;
-  position: sticky;
   top: 0;
   background-color: rgb(63, 63, 63);
   font-size: 25px;
 }
 
 .job-form {
-  display:inline-block
+  display:inline-block;
 }
 
 .Category-Container {
@@ -40,7 +34,7 @@
   border-width: 2px;
   border: 1px solid rgb(63, 63, 63);
   margin: 10px; 
-  border-color: rgb(63, 63, 63);
+  border-color: rgb(0, 0, 0);
 }
 
 .job-child {

@@ -8,7 +8,7 @@ function App() {
   const [categories, setCategories] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:3001/Categories")
+        fetch("http://localhost:3001/categories")
         .then((r) => r.json())
         .then(data => setCategories(data))
     }, [])
